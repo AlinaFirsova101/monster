@@ -1,1 +1,2 @@
 # monster
+docker-compose up
