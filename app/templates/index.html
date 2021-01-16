@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <script>
+        function handleSubmit(e) {
+            monster.src = '/monster/' + document.getElementById("name").value;
+        }
+    </script>
+    <style>
+        #monsterForm {
+            display: flex;
+            flex-direction: column;
+            width: 400px;
+            margin: auto;
+        }
+
+        input {
+            margin: 5px;
+        }
+
+        #monsterContainer {
+            display: flex;
+            justify-content: center;
+        }
+    </style>
+    <title>Identidock</title>
+</head>
+
+<body>
+    <form id="monsterForm" onsubmit="handleSubmit(this); return false">
+        Hello, <input type="text" name="name" id="name" value="{{name}}">
+        <input type="submit" value="Submit">
+    </form>
+    <div id="monsterContainer">
+        <p>You look like a:
+            <img id="monster" src="/monster/Joe Bloggs" />
+    </div>
+</body>
+
+</html>
