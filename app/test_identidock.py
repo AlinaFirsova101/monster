@@ -10,10 +10,10 @@ class TestIdentify(unittest.TestCase):
     
 
     def test_get_mainpage(self):
-        page = self.app.post( "/", data=dict(name="Moby Dick"))
+        page = self.app.post( "/", data=dict(name="Mary Smith"))
         assert page.status_code == 200
         assert 'Hello' in str( page.data )
-        assert 'Moby Dick' in str( page.data )
+        assert 'Mary Smith' in str( page.data )
 
     
     def test_html_escaping(self):
