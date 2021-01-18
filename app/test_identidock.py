@@ -13,7 +13,7 @@ class TestIdentify(unittest.TestCase):
         page = self.app.get( "/")
         assert page.status_code == 200
         assert 'Hello' in str( page.data )
-        assert 'Mary Smith' in str( page.data )   
+        assert 'Alice Chang' in str( page.data )   
         
 if __name__ == '__main__':
     unittest.main()
